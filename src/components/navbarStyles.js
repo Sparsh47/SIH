@@ -6,7 +6,6 @@ export const navStyles = {
   h: "70px",
   "justify-content": "space-between",
   "align-items": "center",
-  "font-family": "'Roboto', sans-serif",
 };
 
 export const linksStyles = {
