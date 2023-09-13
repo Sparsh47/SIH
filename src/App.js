@@ -1,15 +1,13 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import CoursesSwiper from "./components/CoursesSwiper";
-import Footer from "./components/Footer";
+import { Route } from 'react-router-dom/cjs/react-router-dom.min';
+import LandingPage from "./components/LandingPage";
+import HomePage from './components/HomePage';
+
 
 function App() {
   return (
-    <div w="100%">
-      <Navbar />
-      <Hero />
-      <CoursesSwiper />
-      <Footer />
+    <div style={{backgroundColor : "#4f8098"}} w="100%">
+      <Route exact path="/" component={HomePage}></Route>
+      <Route exact path="/landing" component={LandingPage}></Route>
     </div>
   );
 }
