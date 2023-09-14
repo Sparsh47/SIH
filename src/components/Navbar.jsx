@@ -1,5 +1,16 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Button,
+  Flex,
+  Heading,
+  Text,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@chakra-ui/react";
 import { navStyles, linksStyles, hoverStyles } from "./navbarStyles";
+import { AiOutlineUser } from "react-icons/ai";
+import AvatarPopover from "./AvatarPopover";
 
 function Navbar() {
   return (
@@ -14,24 +25,8 @@ function Navbar() {
           <Text sx={hoverStyles}>Courses</Text>
           <Text sx={hoverStyles}>Contact</Text>
         </Flex>
-        <Flex align="center">
-          <Button
-            m="5px"
-            p="20px"
-            variant="outline"
-            color="white"
-            _hover={{
-              color: "black",
-              bg: "gray.100",
-              transition: "all 0.3s ease",
-            }}
-          >
-            Signup
-          </Button>
-          <Button m="5px" p="20px">
-            Login
-          </Button>
-        </Flex>
+        {/* <Avatar bg="gray.300" icon={<AiOutlineUser fontSize="1.5rem" />} /> */}
+        <AvatarPopover />
       </Flex>
     </Flex>
   );
