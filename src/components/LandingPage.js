@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import CoursesSwiper from "./CoursesSwiper";
+import Navbar from "./Navbar/Navbar";
+import Hero from "./Hero/Hero";
+import CoursesSwiper from "./Courses/CoursesSwiper";
 import Footer from "./Footer";
 
 const LandingPage = () => {

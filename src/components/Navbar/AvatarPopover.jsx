@@ -44,7 +44,7 @@ function AvatarPopover() {
               <Text
                 ml="5px"
                 fontWeight="semibold"
-                color="gray.600"
+                color="#36393c"
                 fontSize="20px"
               >
                 John Doe
@@ -63,9 +63,9 @@ function AvatarPopover() {
             borderRadius="10px"
             mt="10px"
           >
-            <HStack align="center" color="gray.600">
+            <HStack align="center" color="#36393c">
               <FontAwesomeIcon icon={faSignOut} fontWeight="100" />
-              <Text fontWeight="semibold" color="gray.600">
+              <Text fontWeight="semibold" color="#36393c">
                 Sign Out
               </Text>
             </HStack>

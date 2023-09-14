@@ -4,7 +4,7 @@ import { courses } from "./Courses";
 
 function CoursesSwiper() {
   return (
-    <HStack w="100%" h="70vh" bg="gray.300" spacing={10} justify="center">
+    <HStack w="100%" h="70vh" spacing={10} justify="center">
       {courses.map((course) => {
         return (
           <CourseCard key={course.id} title={course.title} desc={course.desc} />
