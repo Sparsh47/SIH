@@ -26,9 +26,6 @@ const headingStyles = {
 function Footer() {
   return (
     <Flex w="100%" h="30vh" bg="gray.500" justify="center" color="white">
-      {/* <Heading py="20px" color="#f5f5f5" textAlign="center">
-        FOOTER
-      </Heading> */}
       <Flex w="80%" h="100%" align="center" justify="space-around" gap="20px">
         <Box w="45%" h="50%">
           <Heading sx={headingStyles}>About</Heading>

@@ -1,15 +1,5 @@
-import {
-  Avatar,
-  Button,
-  Flex,
-  Heading,
-  Text,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { navStyles, linksStyles, hoverStyles } from "./navbarStyles";
-import { AiOutlineUser } from "react-icons/ai";
 import AvatarPopover from "./AvatarPopover";
 
 function Navbar() {
@@ -25,7 +15,6 @@ function Navbar() {
           <Text sx={hoverStyles}>Courses</Text>
           <Text sx={hoverStyles}>Contact</Text>
         </Flex>
-        {/* <Avatar bg="gray.300" icon={<AiOutlineUser fontSize="1.5rem" />} /> */}
         <AvatarPopover />
       </Flex>
     </Flex>

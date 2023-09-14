@@ -3,12 +3,17 @@ import {
   Avatar,
   Flex,
   Button,
+  Link,
   Popover,
   PopoverContent,
   PopoverTrigger,
+  Text,
+  HStack,
   Divider,
 } from "@chakra-ui/react";
 import { AiOutlineUser } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 
 function AvatarPopover() {
   return (
@@ -19,25 +24,52 @@ function AvatarPopover() {
           _hover={{ cursor: "pointer" }}
         />
       </PopoverTrigger>
-      <PopoverContent maxW="150px" mr="50px" mt="10px">
+      <PopoverContent maxW="250px" mr="50px" mt="10px">
         <Flex display="flex" align="start" direction="column" p="15px">
-          <Button
-            variant="link"
-            __css={{ textDecoration: "none" }}
+          <Link
+            href="#"
             fontSize="lg"
             fontWeight="regular"
+            w="100%"
+            _hover={{ textDecor: "none" }}
+            mb="5px"
           >
-            Profile
-          </Button>
-          <Divider color="gray.700" textDecorationThickness="3px" />
-          <Button
-            variant="link"
-            __css={{ textDecoration: "none" }}
+            <HStack align="center" h="75px">
+              <Avatar
+                name="John Doe"
+                _hover={{ cursor: "pointer" }}
+                w="60px"
+                h="60px"
+              />
+              <Text
+                ml="5px"
+                fontWeight="semibold"
+                color="gray.600"
+                fontSize="20px"
+              >
+                John Doe
+              </Text>
+            </HStack>
+          </Link>
+          <Divider />
+          <Link
+            href="#"
             fontSize="lg"
             fontWeight="regular"
+            w="100%"
+            textAlign="left"
+            _hover={{ textDecor: "none", bg: "gray.100" }}
+            p="10px"
+            borderRadius="10px"
+            mt="10px"
           >
-            Logout
-          </Button>
+            <HStack align="center" color="gray.600">
+              <FontAwesomeIcon icon={faSignOut} fontWeight="100" />
+              <Text fontWeight="semibold" color="gray.600">
+                Sign Out
+              </Text>
+            </HStack>
+          </Link>
         </Flex>
       </PopoverContent>
     </Popover>
