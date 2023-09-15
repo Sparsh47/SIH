@@ -15,16 +15,20 @@ function CourseCard(props) {
       <CardBody fontFamily="Inter, sans-serif">
         <Stack>
           <Box bg="gray.100" h="275px" w="100%" borderRadius="10px"></Box>
-          <Heading fontSize="22px" fontWeight="semibold" color="#000">
+          <Heading
+            fontSize="22px"
+            fontWeight="semibold"
+            color="primaryTextColor"
+          >
             {props.title}
           </Heading>
-          <Text fontSize="18px" textAlign="justify" color="#7d7c83">
+          <Text fontSize="18px" textAlign="justify" color="secondaryTextColor">
             {props.desc}
           </Text>
           <HStack minH="fit-content">
             <Button
               variant="ghost"
-              color="#2454ff"
+              color="ctaColor"
               _hover={{ bg: "blue.50" }}
               w="sm"
               h="50px"
@@ -34,10 +38,10 @@ function CourseCard(props) {
             <Button
               variant="solid"
               color="white"
-              bg="#2454ff"
+              bg="ctaColor"
               w="sm"
               h="50px"
-              _hover={{ bg: "#1f48db" }}
+              _hover={{ bg: "ctaHover" }}
             >
               Personalize
             </Button>

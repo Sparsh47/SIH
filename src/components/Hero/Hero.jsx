@@ -5,7 +5,7 @@ function Hero() {
     <Box w="100%" h={`calc(100vh - 70px)`}>
       <Heading
         py="20px"
-        color="#555"
+        color="primaryTextColor"
         textAlign="center"
         fontFamily="Inter, sans-serif"
         fontWeight="600"

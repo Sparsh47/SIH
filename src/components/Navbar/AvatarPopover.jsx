@@ -2,7 +2,6 @@ import React from "react";
 import {
   Avatar,
   Flex,
-  Button,
   Link,
   Popover,
   PopoverContent,
@@ -44,7 +43,7 @@ function AvatarPopover() {
               <Text
                 ml="5px"
                 fontWeight="semibold"
-                color="#36393c"
+                color="primaryTextColor"
                 fontSize="20px"
               >
                 John Doe
@@ -63,9 +62,9 @@ function AvatarPopover() {
             borderRadius="10px"
             mt="10px"
           >
-            <HStack align="center" color="#36393c">
-              <FontAwesomeIcon icon={faSignOut} fontWeight="100" />
-              <Text fontWeight="semibold" color="#36393c">
+            <HStack align="center" color="secondaryTextColor">
+              <FontAwesomeIcon icon={faSignOut} />
+              <Text fontWeight="semibold" ml="5px">
                 Sign Out
               </Text>
             </HStack>

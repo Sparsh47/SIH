@@ -1,6 +1,6 @@
 export const navStyles = {
   as: "nav",
-  bg: "white",
+  bg: "primaryColor",
   maxW: "100vw",
   px: "50px",
   h: "70px",
@@ -17,16 +17,16 @@ export const linksStyles = {
   h: "100%",
   "justify-content": "space-around",
   "align-items": "center",
-  "font-size": "18px",
+  "font-size": "20px",
   "font-weight": "400",
-  color: "#000",
+  color: "primaryTextColor",
 };
 
 export const hoverStyles = {
   as: "li",
   cursor: "pointer",
   ":hover": {
-    color: "#7d7c83",
+    color: "secondaryTextColor",
     transition: "all 0.3s ease-in-out",
   },
 };

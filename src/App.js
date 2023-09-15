@@ -4,7 +4,7 @@ import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "white" }} w="100%" className="hi">
+    <div style={{ backgroundColor: "primaryColor" }} w="100%" className="hi">
       <Route exact path="/" component={HomePage}></Route>
       <Route exact path="/landing" component={LandingPage}></Route>
     </div>
