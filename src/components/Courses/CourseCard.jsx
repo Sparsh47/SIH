@@ -6,8 +6,11 @@ import {
   CardBody,
   Stack,
   Button,
-  HStack,
+  ButtonGroup,
+  Link as ChakraLink,
+  LinkProps,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 function CourseCard(props) {
   return (
@@ -25,7 +28,7 @@ function CourseCard(props) {
           <Text fontSize="18px" textAlign="justify" color="secondaryTextColor">
             {props.desc}
           </Text>
-          <HStack minH="fit-content">
+          <ButtonGroup minH="fit-content">
             <Button
               variant="ghost"
               color="ctaColor"
@@ -33,7 +36,13 @@ function CourseCard(props) {
               w="sm"
               h="50px"
             >
-              View Course
+              <ChakraLink
+                as={ReactRouterLink}
+                to="/courses"
+                style={{ textDecoration: "none" }}
+              >
+                View Course
+              </ChakraLink>
             </Button>
             <Button
               variant="solid"
@@ -45,7 +54,7 @@ function CourseCard(props) {
             >
               Personalize
             </Button>
-          </HStack>
+          </ButtonGroup>
         </Stack>
       </CardBody>
     </Card>
