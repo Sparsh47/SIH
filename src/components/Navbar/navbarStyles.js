@@ -7,7 +7,6 @@ export const navStyles = {
   "justify-content": "space-between",
   "align-items": "center",
   "border-bottom": "1px solid #eee",
-  "font-family": "'Inter', sans-serif",
 };
 
 export const linksStyles = {
