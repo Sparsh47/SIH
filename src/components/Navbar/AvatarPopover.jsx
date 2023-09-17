@@ -13,8 +13,17 @@ import {
 import { AiOutlineUser } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 function AvatarPopover() {
+
+  const history = useHistory();
+
+  const logoutHandler = () => {
+    localStorage.removeItem("userInfo");
+    history.push("/");
+  };
+
   return (
     <Popover>
       <PopoverTrigger>
@@ -64,8 +73,8 @@ function AvatarPopover() {
           >
             <HStack align="center" color="secondaryTextColor">
               <FontAwesomeIcon icon={faSignOut} />
-              <Text fontWeight="semibold" ml="5px">
-                Sign Out
+              <Text fontWeight="semibold" ml="5px" onClick={logoutHandler}>
+                Log Out
               </Text>
             </HStack>
           </Link>
