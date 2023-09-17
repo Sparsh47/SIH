@@ -7,7 +7,7 @@ function CourseHeader(props) {
         <Heading color="primaryTextColor" fontSize="40px" fontWeight="800">
           {props.title}
         </Heading>
-        <Box>
+        <Box ml="-5px">
           <Text
             fontSize="18px"
             m="5px"
@@ -35,7 +35,7 @@ function CourseHeader(props) {
           fontSize="16px"
           w="200px"
         >
-          Start for Free
+          Personalize
         </Button>
       </Flex>
       <Box
