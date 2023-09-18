@@ -1,59 +1,60 @@
-import { Box, Container, Tab, TabList, TabPanels, TabPanel, Tabs, Text } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { Box, Container, Text } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 import Login from "./Authentication/Login";
 import SignUp from "./Authentication/SignUp";
 import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
-
   const history = useHistory();
+
+  const [visible, setVisible] = useState(false);
+
+  const handleVisiblity = () => {
+    setVisible(!visible);
+  };
 
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    if(userInfo){
+    if (userInfo) {
       history.push("/landing");
     }
-  },[history])
+  }, [history]);
 
   return (
-    <Container maxW="xl" centerContent h="100vh">
+    <Container
+      maxW="xl"
+      centerContent
+      h="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+    >
       <Box
-        d="flex"
-        p={3}
-        bg={"white"}
-        justifyContent="center"
-        borderRadius="lg"
+        bg="white"
         w="100%"
+        borderRadius="lg"
         borderWidth="1px"
-        m="40px 0 15px 0"
+        color="black"
+        p="20px"
       >
         <Text
-          fontWeight="bold"
-          fontSize="4xl"
-          fontFamily="Work sans"
-          color="black"
+          fontWeight="light"
+          fontSize="lg"
+          color="primaryTextColor"
           justifyContent="center"
           textAlign="center"
           bg="white"
+          pt="35px"
+          pb="5px"
         >
-          SIH PROJECT
+          LOGO
         </Text>
-      </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px" color="black">
-        <Tabs variant="soft-rounded" bg="white">
-          <TabList bg="white">
-            <Tab width="50%">Sign Up</Tab>
-            <Tab width="50%">Login</Tab>
-          </TabList>
-          <TabPanels bg="white">
-            <TabPanel bg="white">
-              <SignUp/>
-            </TabPanel>
-            <TabPanel bg="white">
-              <Login/>
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+        <Box>
+          <SignUp visible={visible} handleVisiblity={handleVisiblity} />
+        </Box>
+        <Box>
+          <Login visible={visible} handleVisiblity={handleVisiblity} />
+        </Box>
       </Box>
     </Container>
   );
