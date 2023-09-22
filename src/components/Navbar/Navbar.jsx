@@ -1,5 +1,12 @@
-import { Divider, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Divider,
+  Flex,
+  Heading,
+  Text,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import { navStyles, linksStyles, hoverStyles } from "./navbarStyles";
+import { Link as ReactRouterLink } from "react-router-dom";
 import AvatarPopover from "./AvatarPopover";
 
 function Navbar() {
@@ -10,7 +17,16 @@ function Navbar() {
       </Heading>
       <Flex w="15%" h="70%" align="center">
         <Flex sx={linksStyles}>
-          <Text sx={hoverStyles}>Our Team</Text>
+          <Text sx={hoverStyles}>
+            {" "}
+            <ChakraLink
+              as={ReactRouterLink}
+              to="/our-team"
+              style={{ textDecoration: "none" }}
+            >
+              Our Team
+            </ChakraLink>
+          </Text>
         </Flex>
         <Divider orientation="vertical" px="15px" />
         <AvatarPopover />

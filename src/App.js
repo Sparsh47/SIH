@@ -7,6 +7,7 @@ import axios from "axios";
 import Home from "./components/Home/Home";
 import Quiz from "./components/Quiz/Quiz";
 import Result from "./components/Result/Result";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 function App() {
   const [questions, setQuestions] = useState();
@@ -42,6 +43,7 @@ function App() {
       <Route path="/result">
         <Result name={name} score={score} setScore = {setScore} />
       </Route>
+      <Route exact path="/our-team" component={OurTeam}></Route>
     </div>
   );
 }
