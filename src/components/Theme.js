@@ -11,7 +11,7 @@ const theme = extendTheme({
     primaryColor: "#fff",
     ctaColor: "#2454ff",
     ctaHover: "#1f48db",
-    footerColor: "#ebf8ff",
+    footerColor: "rgba(235, 248, 255, 0.4)",
     footerTextColor: "#718096",
   },
 });
