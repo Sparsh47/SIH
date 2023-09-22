@@ -52,7 +52,14 @@ function CourseCard(props) {
               h="50px"
               _hover={{ bg: "ctaHover" }}
             >
-              Personalize
+              <ChakraLink
+                as={ReactRouterLink}
+                to="/prequiz"
+                style={{ textDecoration: "none" }}
+              >
+               Personalize
+              </ChakraLink>
+              
             </Button>
           </ButtonGroup>
         </Stack>
