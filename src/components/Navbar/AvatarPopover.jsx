@@ -9,14 +9,15 @@ import {
   Text,
   HStack,
   Divider,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 
 function AvatarPopover() {
-
   const history = useHistory();
 
   const logoutHandler = () => {
@@ -34,8 +35,9 @@ function AvatarPopover() {
       </PopoverTrigger>
       <PopoverContent maxW="250px" mr="50px" mt="10px">
         <Flex display="flex" align="start" direction="column" p="15px">
-          <Link
-            href="#"
+          <ChakraLink
+            as={ReactRouterLink}
+            to="/profile"
             fontSize="lg"
             fontWeight="regular"
             w="100%"
@@ -58,7 +60,7 @@ function AvatarPopover() {
                 John Doe
               </Text>
             </HStack>
-          </Link>
+          </ChakraLink>
           <Divider />
           <Link
             href="#"

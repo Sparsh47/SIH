@@ -56,9 +56,8 @@ function CourseCard(props) {
                 to="/prequiz"
                 style={{ textDecoration: "none" }}
               >
-               Personalize
+                Personalize
               </ChakraLink>
-              
             </Button>
           </ButtonGroup>
         </Stack>

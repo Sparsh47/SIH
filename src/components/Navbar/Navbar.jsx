@@ -12,8 +12,14 @@ import AvatarPopover from "./AvatarPopover";
 function Navbar() {
   return (
     <Flex sx={navStyles}>
-      <Heading p="5px" ml="50px" fontSize="40px">
-        Logo
+      <Heading p="5px" ml="50px" fontSize="40px" fontWeight="semibold">
+        <ChakraLink
+          as={ReactRouterLink}
+          to="/landing"
+          style={{ textDecoration: "none" }}
+        >
+          <span style={{ color: "#2454ff" }}>Atma</span>Shiksha
+        </ChakraLink>
       </Heading>
       <Flex w="15%" h="70%" align="center">
         <Flex sx={linksStyles}>
