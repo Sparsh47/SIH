@@ -15,13 +15,14 @@ function App() {
   const [score, setScore] = useState(0);
 
   const fetchQuestions = async () => {
-    const {data}  = await axios.get(
-      `https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple#`
-    );
-
-    // console.log(data);
-    setQuestions(data.results);
-  };
+    try {
+      const { data } = await axios.get(`http://127.0.0.1:8000/quessionaire-api/python`);
+      console.log(data);
+      setQuestions(data.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };  
 
   return (
     <div style={{ backgroundColor: "primaryColor" }} w="100%" className="hi">
