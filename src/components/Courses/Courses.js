@@ -6,17 +6,17 @@ export const courses = [
   },
   {
     id: 2,
-    title: "MERN Stack Bootcamp",
+    title: "Web Developement Bootcamp",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
     id: 3,
-    title: "Kotlin Developement Bootcamp",
+    title: "Android Developement Bootcamp",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
     id: 4,
-    title: "Data Science Bootcamp",
+    title: "Data Structures & Algorithms",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
 ];

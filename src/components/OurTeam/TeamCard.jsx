@@ -64,14 +64,12 @@ function TeamCard(props) {
             color="#718096"
             cursor="pointer"
           />
-          <Link href={props.socials.instagram}>
-            <FontAwesomeIcon
-              icon={faInstagram}
-              fontSize="30px"
-              color="#718096"
-              cursor="pointer"
-            />
-          </Link>
+          <FontAwesomeIcon
+            icon={faInstagram}
+            fontSize="30px"
+            color="#718096"
+            cursor="pointer"
+          />
         </Flex>
       </CardBody>
     </Card>

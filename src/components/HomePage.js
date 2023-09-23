@@ -38,7 +38,7 @@ const HomePage = () => {
         p="20px"
       >
         <Text
-          fontWeight="light"
+          fontWeight="normal"
           fontSize="lg"
           color="primaryTextColor"
           justifyContent="center"
@@ -47,7 +47,7 @@ const HomePage = () => {
           pt="35px"
           pb="5px"
         >
-          LOGO
+          <span style={{ color: "#2454ff" }}>Atma</span>Shiksha
         </Text>
         <Box>
           <SignUp visible={visible} handleVisiblity={handleVisiblity} />

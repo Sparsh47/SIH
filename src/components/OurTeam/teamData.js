@@ -8,17 +8,6 @@ import Aakriti from "../../images/aakriti.jpeg";
 export const teamInfo = [
   {
     id: 1,
-    name: "Sparsh Shandilya",
-    post: "CEO & Team Lead",
-    imageUrl: Sparsh,
-    socials: {
-      linkedin: "https://www.linkedin.com/in/sparshshandilya/",
-      github: "https://github.com/Sparsh47",
-      instagram: "https://www.instagram.com/sparshshy/",
-    },
-  },
-  {
-    id: 2,
     name: "Avval Narang",
     post: "Peon",
     imageUrl: Avval,
@@ -29,18 +18,18 @@ export const teamInfo = [
     },
   },
   {
-    id: 3,
-    name: "Sumedhav Krishna",
-    post: "Founder",
-    imageUrl: Sumedhav,
+    id: 2,
+    name: "Aakriti",
+    post: "ECE waali",
+    imageUrl: Aakriti,
     socials: {
-      linkedin: "https://www.linkedin.com/in/sumedhav-krishna/",
-      github: "https://github.com/sumedhav2004",
-      instagram: "https://www.instagram.com/sumedhav_krishna/",
+      linkedin: "https://www.linkedin.com/in/aakriti-k-mait/",
+      github: "https://github.com/eaakriti1",
+      instagram: "https://www.instagram.com/eaakriti1/",
     },
   },
   {
-    id: 4,
+    id: 3,
     name: "Pritish",
     post: "Co-Founder",
     imageUrl: Pritish,
@@ -51,7 +40,7 @@ export const teamInfo = [
     },
   },
   {
-    id: 5,
+    id: 4,
     name: "Saksham Singh",
     post: "Sweeper",
     imageUrl: Saksham,
@@ -62,14 +51,25 @@ export const teamInfo = [
     },
   },
   {
-    id: 6,
-    name: "Aakriti",
-    post: "ECE waali",
-    imageUrl: Aakriti,
+    id: 5,
+    name: "Sparsh Shandilya",
+    post: "CEO & Team Lead",
+    imageUrl: Sparsh,
     socials: {
-      linkedin: "https://www.linkedin.com/in/aakriti-k-mait/",
-      github: "https://github.com/eaakriti1",
-      instagram: "https://www.instagram.com/eaakriti1/",
+      linkedin: "https://www.linkedin.com/in/sparshshandilya/",
+      github: "https://github.com/Sparsh47",
+      instagram: "https://www.instagram.com/sparshshy/",
+    },
+  },
+  {
+    id: 6,
+    name: "Sumedhav Krishna",
+    post: "Founder",
+    imageUrl: Sumedhav,
+    socials: {
+      linkedin: "https://www.linkedin.com/in/sumedhav-krishna/",
+      github: "https://github.com/sumedhav2004",
+      instagram: "https://www.instagram.com/sumedhav_krishna/",
     },
   },
 ];
