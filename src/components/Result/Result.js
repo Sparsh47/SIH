@@ -3,17 +3,18 @@ import { useHistory } from "react-router";
 import "./Result.css";
 import { Button, Text } from "@chakra-ui/react";
 
-const Result = ({ score , setScore}) => {
-
+const Result = ({ score, setScore }) => {
   const history = useHistory();
-      
-      const handleClick = () => {
-        setScore(0);
-        history.push("/prequiz");
-      }
-      return (
+
+  const handleClick = () => {
+    setScore(0);
+    history.push("/prequiz");
+  };
+  return (
     <div className="result">
-      <Text className="title" fontWeight="bold" fontSize={40}>Final Score : {score}</Text>
+      <Text className="title" fontWeight="bold" fontSize={40}>
+        Final Score : {score}
+      </Text>
       <Button
         color="secondary"
         style={{ alignSelf: "center", marginTop: 20 }}
