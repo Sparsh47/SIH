@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Question from "../Question/Question";
-import "./Quiz.css";
-import {  Spinner } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 
 const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
   const [options, setOptions] = useState();
@@ -24,7 +23,7 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
   };
 
   return (
-    <div className="quiz">
+    <Flex w="100%" h="100vh" direction="column" align="center" justify="center">
       {questions ? (
         <>
           <Question
@@ -37,14 +36,14 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
             setScore={setScore}
             setQuestions={setQuestions}
           />
-          <div className="quizInfo">
+          <Flex w="100%" align="center" justify="center">
             <span>Score : {score}</span>
-          </div>
+          </Flex>
         </>
       ) : (
         <Spinner w={20} h={20} marginTop="200px" size="xl" alignSelf="center" />
       )}
-    </div>
+    </Flex>
   );
 };
 

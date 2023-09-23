@@ -50,7 +50,9 @@ const Question = ({
       <h1>Question {currQues + 1} / 10 : </h1>
 
       <div className="singleQuestion">
-        <h2>{questions[currQues].question}</h2>
+        <h2>
+          {currQues + 1}.{questions[currQues].question}
+        </h2>
         <div className="options">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
@@ -67,17 +69,26 @@ const Question = ({
         </div>
         <div className="controls">
           <Button
-            color="secondary"
-            style={{ width: 185 }}
+            colorScheme="red"
+            w="30%"
+            h="50px"
+            fontSize="18px"
+            fontWeight="medium"
             href="/prequiz"
             onClick={() => handleQuit()}
           >
             Quit
           </Button>
+
           <Button
-            color="primary"
-            style={{ width: 185 }}
+            color="white"
+            w="30%"
+            h="50px"
+            fontSize="18px"
+            fontWeight="medium"
             onClick={handleNext}
+            bg="ctaColor"
+            _hover={{ bg: "ctaHover" }}
           >
             {currQues === 9 ? "Submit" : "Next Question"}
           </Button>

@@ -11,7 +11,7 @@ export const courses = [
   },
   {
     id: 3,
-    title: "Android Developement Bootcamp",
+    title: "Introduction to C Programming",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
