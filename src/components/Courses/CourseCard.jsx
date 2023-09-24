@@ -7,11 +7,11 @@ import {
   Stack,
   Button,
   ButtonGroup,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CourseCard(props) {
+  let coursename = props.title;
   return (
     <Card maxW="420px" borderRadius="20px" p="5px" borderTop="1px solid #eee">
       <CardBody fontFamily="Inter, sans-serif">
@@ -35,13 +35,13 @@ function CourseCard(props) {
               w="sm"
               h="50px"
             >
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
+                // as={ReactRouterLink}
                 to="/courses"
                 style={{ textDecoration: "none" }}
               >
                 View Course
-              </ChakraLink>
+              </Link>
             </Button>
             <Button
               variant="solid"
@@ -51,13 +51,12 @@ function CourseCard(props) {
               h="50px"
               _hover={{ bg: "ctaHover" }}
             >
-              <ChakraLink
-                as={ReactRouterLink}
-                to="/prequiz"
+              <Link
+                to={{pathname : "/prequiz", state : props.title}}
                 style={{ textDecoration: "none" }}
               >
                 Personalize
-              </ChakraLink>
+              </Link>
             </Button>
           </ButtonGroup>
         </Stack>

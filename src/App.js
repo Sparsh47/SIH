@@ -9,17 +9,28 @@ import Quiz from "./components/Quiz/Quiz";
 import Result from "./components/Result/Result";
 import OurTeam from "./components/OurTeam/OurTeam";
 import UserProfile from "./components/Profile/UserProfile";
+import { courses } from "./components/Courses/Courses";
 
 function App() {
-  const [questions, setQuestions] = useState();
+  const [questions, setQuestions] = useState([]);
+  const [answers, setanswers] = useState([]);
+  const [choiceA, setchoiceA] = useState([]);
+  const [choiceB, setchoiceB] = useState([]);
+  const [choiceC, setchoiceC] = useState([]);
+  const [choiceD, setchoiceD] = useState([]);
   const [name, setName] = useState();
   const [score, setScore] = useState(0);
 
-  const fetchQuestions = async () => {
+  const fetchQuestions = async (title) => {
     try {
       const { data } = await axios.get(`http://127.0.0.1:8000/quessionaire-api/python`);
-      console.log(data);
-      setQuestions(data.data);
+      // console.log(data);
+      setQuestions(data.Questions);
+      setanswers(data.Answer);
+      setchoiceA(data["Choice A"]);
+      setchoiceB(data["Choice B"]);
+      setchoiceC(data["Choice C"]);
+      setchoiceD(data["Choice D"]);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -40,6 +51,11 @@ function App() {
           score={score}
           setScore={setScore}
           setQuestions={setQuestions}
+          answers = {answers}
+          choiceA = {choiceA}
+          choiceB = {choiceB}
+          choiceC = {choiceC}
+          choiceD = {choiceD}
         />
       </Route>
       <Route path="/result">
