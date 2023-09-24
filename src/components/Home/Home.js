@@ -23,7 +23,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
 
 
   return (
-    <div className="content">
+    <div className="content hiii">
       <div className="settings">
         <span style={{ fontSize: 30 }}>Start Quiz</span>
         <div className="settings__select">
