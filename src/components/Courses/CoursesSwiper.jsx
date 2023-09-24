@@ -7,7 +7,12 @@ function CoursesSwiper() {
     <HStack w="100%" h="70vh" spacing={10} justify="center">
       {courses.map((course) => {
         return (
-          <CourseCard key={course.id} title={course.title} desc={course.desc} />
+          <CourseCard
+            key={course.id}
+            id={course.id}
+            title={course.title}
+            desc={course.desc}
+          />
         );
       })}
     </HStack>

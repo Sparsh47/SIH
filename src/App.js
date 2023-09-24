@@ -34,7 +34,15 @@ function App() {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  };  
+  };
+  // const fetchQuestions = async () => {
+  //   const { data } = await axios.get(
+  //     `https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple#`
+  //   );
+
+  //   // console.log(data);
+  //   setQuestions(data.results);
+  // };
 
   return (
     <div style={{ backgroundColor: "primaryColor" }} w="100%" className="hi">
@@ -63,6 +71,7 @@ function App() {
       </Route>
       <Route exact path="/our-team" component={OurTeam}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
+      <Route exact path="/personalize" component={Personalize}></Route>
     </div>
   );
 }

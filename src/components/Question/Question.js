@@ -152,8 +152,11 @@ const Question = ({
         </div>
         <div className="controls">
           <Button
-            color="secondary"
-            style={{ width: 185 }}
+            colorScheme="red"
+            w="30%"
+            h="50px"
+            fontSize="18px"
+            fontWeight="medium"
             href="/prequiz"
             onClick={() => handleQuit()}
           >

@@ -11,7 +11,11 @@ export const courses = [
   },
   {
     id: 3,
+<<<<<<< HEAD
     title: "Android Developement",
+=======
+    title: "Introduction to C Programming",
+>>>>>>> 6bcccc9a7f6d8098176a905e0683384cbfdade52
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
