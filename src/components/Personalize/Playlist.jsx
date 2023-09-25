@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import { courseVideos } from "./courseAbout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";

@@ -6,7 +6,7 @@ import Playlist from "./Playlist";
 import { useState } from "react";
 
 function Personalize() {
-  const [video, setVideo] = useState(0);
+  const [video, setVideo] = useState(1);
 
   function handleClick(id) {
     setVideo(id);
