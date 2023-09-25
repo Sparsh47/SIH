@@ -34,7 +34,7 @@ function CourseCard(props) {
               _hover={{ bg: "blue.50" }}
               w="sm"
               h="50px"
-              onClick={handleClick}
+              // onClick={handleClick}
             >
               <Link
                 // as={ReactRouterLink}
@@ -53,7 +53,7 @@ function CourseCard(props) {
               _hover={{ bg: "ctaHover" }}
             >
               <Link
-                to={{pathname : "/prequiz", state : props.title}}
+                to={{ pathname: "/prequiz", state: props.title }}
                 style={{ textDecoration: "none" }}
               >
                 Personalize

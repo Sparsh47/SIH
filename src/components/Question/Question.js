@@ -112,7 +112,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 0 && ifcorrect} ${
               selected === 0 && ifwrong
-            } ${ifwrong && choiceA[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceA[currQues] === answers[currQues] && "select"
+            }`}
             key="0"
             onClick={() => handleCheckA(currQues)}
             disabled={selected}
@@ -122,7 +124,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 1 && ifcorrect} ${
               selected === 1 && ifwrong
-            } ${ifwrong && choiceB[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceB[currQues] === answers[currQues] && "select"
+            }`}
             key="1"
             onClick={() => handleCheckB(currQues)}
             disabled={selected}
@@ -132,7 +136,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 2 && ifcorrect} ${
               selected === 2 && ifwrong
-            } ${ifwrong && choiceC[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceC[currQues] === answers[currQues] && "select"
+            }`}
             key="2"
             onClick={() => handleCheckC(currQues)}
             disabled={selected}
@@ -142,7 +148,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 3 && ifcorrect} ${
               selected === 3 && ifwrong
-            } ${ifwrong && choiceD[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceD[currQues] === answers[currQues] && "select"
+            }`}
             key="3"
             onClick={() => handleCheckD(currQues)}
             disabled={selected}
@@ -162,7 +170,16 @@ const Question = ({
           >
             Quit
           </Button>
-          <Button color="primary" style={{ width: 185 }} onClick={handleNext}>
+          <Button
+            bg="ctaColor"
+            color="white"
+            _hover={{ bg: "ctaHover" }}
+            w="30%"
+            h="50px"
+            fontSize="18px"
+            fontWeight="medium"
+            onClick={handleNext}
+          >
             {currQues === answers.length - 1 ? "Submit" : "Next Question"}
           </Button>
         </div>

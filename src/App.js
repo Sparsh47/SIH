@@ -9,6 +9,7 @@ import Quiz from "./components/Quiz/Quiz";
 import Result from "./components/Result/Result";
 import OurTeam from "./components/OurTeam/OurTeam";
 import UserProfile from "./components/Profile/UserProfile";
+import Personalize from "./components/Personalize/Personalize";
 import { courses } from "./components/Courses/Courses";
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
 
   const fetchQuestions = async (title) => {
     try {
-      const { data } = await axios.get(`http://127.0.0.1:8000/quessionaire-api/python`);
+      const { data } = await axios.get(
+        `http://127.0.0.1:8000/quessionaire-api/python`
+      );
       // console.log(data);
       setQuestions(data.Questions);
       setanswers(data.Answer);
@@ -59,11 +62,11 @@ function App() {
           score={score}
           setScore={setScore}
           setQuestions={setQuestions}
-          answers = {answers}
-          choiceA = {choiceA}
-          choiceB = {choiceB}
-          choiceC = {choiceC}
-          choiceD = {choiceD}
+          answers={answers}
+          choiceA={choiceA}
+          choiceB={choiceB}
+          choiceC={choiceC}
+          choiceD={choiceD}
         />
       </Route>
       <Route path="/result">
