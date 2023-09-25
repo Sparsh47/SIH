@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 import "./Result.css";
-import { Button, Text } from "@chakra-ui/react";
+import { Button, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 const Result = ({ score, setScore }) => {
   const history = useHistory();
@@ -15,13 +16,25 @@ const Result = ({ score, setScore }) => {
       <Text className="title" fontWeight="bold" fontSize={40}>
         Final Score : {score}
       </Text>
-      <Button
-        color="secondary"
-        style={{ alignSelf: "center", marginTop: 20 }}
-        onClick={handleClick}
+      <ChakraLink
+        as={ReactRouterLink}
+        to="/personalize"
+        style={{ textDecoration: "none" }}
       >
-        Go to homepage
-      </Button>
+        <Button
+          color="white"
+          bg="ctaColor"
+          _hover={{ bg: "ctaHover" }}
+          fontSize="18px"
+          fontWeight="semibold"
+          w="200px"
+          h="50px"
+          style={{ alignSelf: "center", marginTop: 20 }}
+          onClick={handleClick}
+        >
+          Go to course
+        </Button>
+      </ChakraLink>
     </div>
   );
 };

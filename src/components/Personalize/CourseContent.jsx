@@ -28,17 +28,6 @@ function CourseContent() {
       direction="column"
       align="center"
     >
-      <Heading
-        px="20px"
-        mb="0.7em"
-        fontSize="5xl"
-        fontWeight="medium"
-        color="primaryTextColor"
-        position="relative"
-        left="-430px"
-      >
-        Course Content
-      </Heading>
       <Accordion
         defaultIndex={[0]}
         allowMultiple
