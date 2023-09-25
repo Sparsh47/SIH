@@ -2,7 +2,7 @@ import { Route } from "react-router-dom/cjs/react-router-dom.min";
 import LandingPage from "./components/LandingPage";
 import HomePage from "./components/HomePage";
 import ViewCourse from "./components/ViewCourse/ViewCourse";
-import Personalize from "./components/Personalize/Personalize";
+// import Personalize from "./components/Personalize/Personalize";
 import { useState } from "react";
 import axios from "axios";
 import Home from "./components/Home/Home";
