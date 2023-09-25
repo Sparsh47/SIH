@@ -43,7 +43,7 @@ const Question = ({
   // };
 
   const handleCheckA = (key) => {
-    setSelected(0);
+    setSelected(4);
     console.log(choiceA[key]);
     if (choiceA[key] === answers[currQues]) {
       setScore(score + 1);
@@ -89,12 +89,17 @@ const Question = ({
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
-      setifcorrect();
-      setifwrong();
+      setifcorrect("");
+      setifwrong("");
+      setError();
     } else setError("Please select an option first");
   };
 
   const handleQuit = () => {
+    setSelected();
+    setifcorrect("");
+    setifwrong("");
+    setError();
     setCurrQues(0);
     setQuestions();
   };
@@ -110,8 +115,8 @@ const Question = ({
         <div className="options">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           <button
-            className={`singleOption ${selected === 0 && ifcorrect} ${
-              selected === 0 && ifwrong
+            className={`singleOption ${selected === 4 && ifcorrect} ${
+              selected === 4 && ifwrong
             } ${
               ifwrong && choiceA[currQues] === answers[currQues] && "select"
             }`}
