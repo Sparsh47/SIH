@@ -10,7 +10,6 @@ import Quiz from "./components/Quiz/Quiz";
 import Result from "./components/Result/Result";
 import OurTeam from "./components/OurTeam/OurTeam";
 import UserProfile from "./components/Profile/UserProfile";
-import Personalize from "./components/Personalize/Personalize";
 import { courses } from "./components/Courses/Courses";
 
 function App() {
@@ -75,6 +74,7 @@ function App() {
       </Route>
       <Route exact path="/our-team" component={OurTeam}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
+      <Route exact path="/personalize" component={Personalize}></Route>
     </div>
   );
 }
