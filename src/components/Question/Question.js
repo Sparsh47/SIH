@@ -43,7 +43,7 @@ const Question = ({
   // };
 
   const handleCheckA = (key) => {
-    setSelected(0);
+    setSelected(4);
     console.log(choiceA[key]);
     if (choiceA[key] === answers[currQues]) {
       setScore(score + 1);
@@ -89,12 +89,17 @@ const Question = ({
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
-      setifcorrect();
-      setifwrong();
+      setifcorrect("");
+      setifwrong("");
+      setError();
     } else setError("Please select an option first");
   };
 
   const handleQuit = () => {
+    setSelected();
+    setifcorrect("");
+    setifwrong("");
+    setError();
     setCurrQues(0);
     setQuestions();
   };
@@ -110,9 +115,11 @@ const Question = ({
         <div className="options">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           <button
-            className={`singleOption ${selected === 0 && ifcorrect} ${
-              selected === 0 && ifwrong
-            } ${ifwrong && choiceA[currQues] === answers[currQues] && "select"}`}
+            className={`singleOption ${selected === 4 && ifcorrect} ${
+              selected === 4 && ifwrong
+            } ${
+              ifwrong && choiceA[currQues] === answers[currQues] && "select"
+            }`}
             key="0"
             onClick={() => handleCheckA(currQues)}
             disabled={selected}
@@ -122,7 +129,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 1 && ifcorrect} ${
               selected === 1 && ifwrong
-            } ${ifwrong && choiceB[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceB[currQues] === answers[currQues] && "select"
+            }`}
             key="1"
             onClick={() => handleCheckB(currQues)}
             disabled={selected}
@@ -132,7 +141,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 2 && ifcorrect} ${
               selected === 2 && ifwrong
-            } ${ifwrong && choiceC[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceC[currQues] === answers[currQues] && "select"
+            }`}
             key="2"
             onClick={() => handleCheckC(currQues)}
             disabled={selected}
@@ -142,7 +153,9 @@ const Question = ({
           <button
             className={`singleOption ${selected === 3 && ifcorrect} ${
               selected === 3 && ifwrong
-            } ${ifwrong && choiceD[currQues] === answers[currQues] && "select"}`}
+            } ${
+              ifwrong && choiceD[currQues] === answers[currQues] && "select"
+            }`}
             key="3"
             onClick={() => handleCheckD(currQues)}
             disabled={selected}

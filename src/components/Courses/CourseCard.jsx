@@ -34,7 +34,7 @@ function CourseCard(props) {
               _hover={{ bg: "blue.50" }}
               w="sm"
               h="50px"
-              onClick={handleClick}
+              // onClick={handleClick}
             >
               <Link
                 // as={ReactRouterLink}
