@@ -1,7 +1,7 @@
 export const courses = [
   {
     id: 1,
-    title: "Machine Learning",
+    title: "AI & Machine Learning",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
@@ -11,12 +11,12 @@ export const courses = [
   },
   {
     id: 3,
-    title: "Android Developement",
+    title: "Programming in C",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
   {
     id: 4,
-    title: "Data Structures & Algorithms",
+    title: "Introduction to Python",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
   },
 ];
