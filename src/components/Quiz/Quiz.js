@@ -58,7 +58,7 @@ const Quiz = ({
           </Flex>
         </>
       ) : (
-        <Spinner w={20} h={20} marginTop="200px" size="xl" alignSelf="center" />
+        <Spinner w={20} h={20} size="xl" alignSelf="center" />
       )}
     </Flex>
   );

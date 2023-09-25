@@ -111,7 +111,7 @@ const Question = ({
       </h1>
 
       <div className="singleQuestion">
-        <h2>{questions[currQues]}</h2>
+        <h2>{questions[currQues].split(") ")[1]}</h2>
         <div className="options">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           <button
