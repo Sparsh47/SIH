@@ -2,7 +2,18 @@ import { useEffect, useState } from "react";
 import Question from "../Question/Question";
 import { Flex, Spinner } from "@chakra-ui/react";
 
-const Quiz = ({ name, questions, score, setScore, setQuestions, answers, choiceA, choiceB, choiceC, choiceD }) => {
+const Quiz = ({
+  name,
+  questions,
+  score,
+  setScore,
+  setQuestions,
+  answers,
+  choiceA,
+  choiceB,
+  choiceC,
+  choiceD,
+}) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
@@ -19,13 +30,12 @@ const Quiz = ({ name, questions, score, setScore, setQuestions, answers, choiceA
   //   );
   // }, [currQues, questions]);
 
-
   // const handleShuffle = (options) => {
   //   return options.sort(() => Math.random() - 0.5);
   // };
 
   return (
-    <div className="quiz">
+    <Flex direction="column" h="100vh" align="center" justify="center">
       {questions[currQues] ? (
         <>
           <Question
@@ -37,10 +47,10 @@ const Quiz = ({ name, questions, score, setScore, setQuestions, answers, choiceA
             score={score}
             setScore={setScore}
             setQuestions={setQuestions}
-            choiceA = {choiceA}
-            choiceB = {choiceB}
-            choiceC = {choiceC}
-            choiceD = {choiceD}
+            choiceA={choiceA}
+            choiceB={choiceB}
+            choiceC={choiceC}
+            choiceD={choiceD}
             answers={answers}
           />
           <Flex w="100%" align="center" justify="center">
@@ -50,7 +60,7 @@ const Quiz = ({ name, questions, score, setScore, setQuestions, answers, choiceA
       ) : (
         <Spinner w={20} h={20} marginTop="200px" size="xl" alignSelf="center" />
       )}
-    </div>
+    </Flex>
   );
 };
 

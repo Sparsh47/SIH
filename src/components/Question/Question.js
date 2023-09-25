@@ -175,7 +175,16 @@ const Question = ({
           >
             Quit
           </Button>
-          <Button color="primary" style={{ width: 185 }} onClick={handleNext}>
+          <Button
+            bg="ctaColor"
+            color="white"
+            _hover={{ bg: "ctaHover" }}
+            w="30%"
+            h="50px"
+            fontSize="18px"
+            fontWeight="medium"
+            onClick={handleNext}
+          >
             {currQues === answers.length - 1 ? "Submit" : "Next Question"}
           </Button>
         </div>

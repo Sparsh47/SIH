@@ -53,7 +53,7 @@ function CourseCard(props) {
               _hover={{ bg: "ctaHover" }}
             >
               <Link
-                to={{pathname : "/prequiz", state : props.title}}
+                to={{ pathname: "/prequiz", state: props.title }}
                 style={{ textDecoration: "none" }}
               >
                 Personalize
