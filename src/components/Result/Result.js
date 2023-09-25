@@ -8,7 +8,7 @@ const Result = ({ score, setScore }) => {
 
   const handleClick = () => {
     setScore(0);
-    history.push("/personalize");
+    history.push("/prequiz");
   };
   return (
     <div className="result">
@@ -20,7 +20,7 @@ const Result = ({ score, setScore }) => {
         style={{ alignSelf: "center", marginTop: 20 }}
         onClick={handleClick}
       >
-        Personalize
+        Go to homepage
       </Button>
     </div>
   );

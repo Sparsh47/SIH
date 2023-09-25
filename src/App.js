@@ -74,7 +74,6 @@ function App() {
       </Route>
       <Route exact path="/our-team" component={OurTeam}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
-      <Route exact path="/personalize" component={Personalize}></Route>
     </div>
   );
 }
