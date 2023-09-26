@@ -99,7 +99,7 @@ const SignUp = ({ visible, handleVisiblity }) => {
           Sign Up
         </Text>
         <Text textAlign="center" fontSize="md" fontWeight="normal" pb="10px">
-          to continue to AppName
+          to continue to AtmaShiksha
         </Text>
       </Box>
       <FormControl id="first-name" py="10px" isRequired>

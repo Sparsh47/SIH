@@ -89,7 +89,7 @@ const Login = ({ visible, handleVisiblity }) => {
           Sign In
         </Text>
         <Text textAlign="center" fontSize="md" fontWeight="normal" pb="10px">
-          to continue to AppName
+          to continue to AtmaShiksha
         </Text>
       </Box>
       <FormControl id="email" py="10px" isRequired>

@@ -57,6 +57,9 @@ function OurTeam() {
                 name={member.name}
                 post={member.post}
                 image={member.imageUrl}
+                linkedin={member.socials.linkedin}
+                instagram={member.socials.instagram}
+                github={member.socials.github}
               />
             );
           })}

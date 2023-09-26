@@ -9,7 +9,7 @@ export const teamInfo = [
   {
     id: 1,
     name: "Avval Narang",
-    post: "Peon",
+    post: "Team Lead",
     imageUrl: Avval,
     socials: {
       linkedin: "https://www.linkedin.com/in/avval/",
@@ -20,7 +20,7 @@ export const teamInfo = [
   {
     id: 2,
     name: "Aakriti",
-    post: "ECE waali",
+    post: "Data Analyst",
     imageUrl: Aakriti,
     socials: {
       linkedin: "https://www.linkedin.com/in/aakriti-k-mait/",
@@ -31,7 +31,7 @@ export const teamInfo = [
   {
     id: 3,
     name: "Pritish",
-    post: "Co-Founder",
+    post: "Backend Engineer",
     imageUrl: Pritish,
     socials: {
       linkedin: "https://www.linkedin.com/in/pritish-singhal-451548228/",
@@ -42,7 +42,7 @@ export const teamInfo = [
   {
     id: 4,
     name: "Saksham Singh",
-    post: "Sweeper",
+    post: "AI Engineer",
     imageUrl: Saksham,
     socials: {
       linkedin: "https://www.linkedin.com/in/saksham-singh-b28b27227/",
@@ -53,7 +53,7 @@ export const teamInfo = [
   {
     id: 5,
     name: "Sparsh Shandilya",
-    post: "CEO & Team Lead",
+    post: "Frontend Engineer",
     imageUrl: Sparsh,
     socials: {
       linkedin: "https://www.linkedin.com/in/sparshshandilya/",
@@ -64,7 +64,7 @@ export const teamInfo = [
   {
     id: 6,
     name: "Sumedhav Krishna",
-    post: "Founder",
+    post: "Backend Engineer",
     imageUrl: Sumedhav,
     socials: {
       linkedin: "https://www.linkedin.com/in/sumedhav-krishna/",
