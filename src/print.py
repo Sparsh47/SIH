@@ -132,59 +132,60 @@ def quiz_file(key):
 
   # Create a DataFrame from the list
   df = {"Questions": filteredq,"Choice A":filtereda,"Choice B":filteredb,"Choice C":filteredc,"Choice D":filteredd,"Answer":filteredtick}
-  
+  return df
   
 
   # print(df)
-  return df
+  
 
-  # Specify the file path where you want to save the Excel file
+ 
+  #incrrct=[]
+  ## Specify the file path where you want to save the Excel file
   #excel_file_path = "datafiltered14.xlsx"
 #
-  ## Save the DataFrame to an Excel file
+ ### Save the DataFrame to an Excel file
   #df.to_excel(excel_file_path, index=False)
 #
   #print(f"Data saved to {excel_file_path}")
 #
   #quiz_data=[]
   #def load_quiz(file_path):
-  #    workbook = openpyxl.load_workbook(file_path)
-  #    sheet = workbook.active
-  #    quiz_data = []
+  #  workbook = openpyxl.load_workbook(file_path)
+  #  sheet = workbook.active
+  #  quiz_data = []
 #
-  #    for row in sheet.iter_rows(min_row=2, values_only=True):
-  #        question, choice_a, choice_b, choice_c, choice_d, correct_answer = row
-  #        choices = [choice_a, choice_b, choice_c, choice_d]
-  #        random.shuffle(choices)  # Shuffle answer choices
-  #        quiz_data.append({
-  #            'question': question,
-  #            'choices': choices,
-  #            'correct_answer': correct_answer
-  #        })
+  #  for row in sheet.iter_rows(min_row=2, values_only=True):
+  #     question, choice_a, choice_b, choice_c, choice_d, correct_answer = row
+  #     choices = [choice_a, choice_b, choice_c, choice_d]
+  #     random.shuffle(choices)  # Shuffle answer choices
+  #     quiz_data.append({
+  #         'question': question,
+  #         'choices': choices,
+  #         'correct_answer': correct_answer
+  #     })
 #
-  #    return quiz_data
+  #  return quiz_data
 #
-  #incrrct=[]
+ #
 #
   #def start_quiz(quiz_data):
-  #    score = 0
-  #    for i, question_data in enumerate(quiz_data, start=1):
-  #        print(f"Question {i}: {question_data['question']}")
-  #        for j, choice in enumerate(question_data['choices'], start=1):
-  #            print(f"{j}. {choice}")
-  #        user_answer = input("Enter your choice (1/2/3/4): ")
-  #        if user_answer == str(question_data['choices'].index(question_data['correct_answer']) + 1):
-  #            print("Correct!\n")
-  #            score += 1
-  #        else:
-  #            incrrct.append(question_data['question'])
-  #            print(f"Wrong! The correct answer is {question_data['correct_answer']}\n")
-#
-  #    print(f"You got {score} out of {len(quiz_data)} questions correct.")
-#
+  #   score = 0
+  #   for i, question_data in enumerate(quiz_data, start=1):
+  #       print(f"Question {i}: {question_data['question']}")
+  #       for j, choice in enumerate(question_data['choices'], start=1):
+  #           print(f"{j}. {choice}")
+  #       user_answer = input("Enter your choice (1/2/3/4): ")
+  #       if user_answer == str(question_data['choices'].index(question_data['correct_answer']) + 1):
+  #           print("Correct!\n")
+  #           score += 1
+  #       else:
+  #           incrrct.append(question_data['question'])
+  #           print(f"Wrong! The correct answer is {question_data['correct_answer']}\n")
+  #   print(f"You got {score} out of {len(quiz_data)} questions correct.")
+  #
   #if __name__ == "__main__":
-  #    excel_file_path = "datafiltered14.xlsx"  # Change this to your Excel file path
-  #    quiz_data = load_quiz(excel_file_path)
-  #    start_quiz(quiz_data)
+  #   excel_file_path = "datafiltered14.xlsx"  # Change this to your Excel file path
+  #   quiz_data = load_quiz(excel_file_path)
+  #   start_quiz(quiz_data)
 #
-#
+  

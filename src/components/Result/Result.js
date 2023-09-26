@@ -14,8 +14,6 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
   console.log("Wrong Questions:", wrongQuestions);
   console.log("ID:", id);
 
-  console.log(incorrect);
-
   const handleClick = () => {
     setScore(0);
     wrongQuestions.forEach((question) => {
@@ -60,5 +58,4 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
     </div>
   );
 };
-
 export default Result;
