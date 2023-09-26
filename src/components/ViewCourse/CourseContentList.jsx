@@ -24,7 +24,7 @@ const iconStyle = {
   fontSize: "18px",
 };
 
-function CourseContentList() {
+function CourseContentList(props) {
   return (
     <List>
       <ListItem sx={listStyle}>
@@ -34,43 +34,19 @@ function CourseContentList() {
       </ListItem>
       <ListItem sx={listStyle}>
         <FontAwesomeIcon icon={faCheckCircle} sx={iconStyle} />
-        <Text sx={listTextStyle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          urna eget odio vehicula vestibulum. Integer quis sapien eu justo
-          iaculis faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla quis urna eget odio vehicula vestibulum. Integer quis
-          sapien eu justo iaculis faucibus.
-        </Text>
+        <Text sx={listTextStyle}>{props.content.one}</Text>
       </ListItem>
       <ListItem sx={listStyle}>
         <FontAwesomeIcon icon={faCheckCircle} sx={iconStyle} />
-        <Text sx={listTextStyle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          urna eget odio vehicula vestibulum. Integer quis sapien eu justo
-          iaculis faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla quis urna eget odio vehicula vestibulum. Integer quis
-          sapien eu justo iaculis faucibus.
-        </Text>
+        <Text sx={listTextStyle}>{props.content.two}</Text>
       </ListItem>
       <ListItem sx={listStyle}>
         <FontAwesomeIcon icon={faCheckCircle} sx={iconStyle} />
-        <Text sx={listTextStyle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          urna eget odio vehicula vestibulum. Integer quis sapien eu justo
-          iaculis faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla quis urna eget odio vehicula vestibulum. Integer quis
-          sapien eu justo iaculis faucibus.
-        </Text>
+        <Text sx={listTextStyle}>{props.content.three}</Text>
       </ListItem>
       <ListItem sx={listStyle}>
         <FontAwesomeIcon icon={faCheckCircle} sx={iconStyle} />
-        <Text sx={listTextStyle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          urna eget odio vehicula vestibulum. Integer quis sapien eu justo
-          iaculis faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla quis urna eget odio vehicula vestibulum. Integer quis
-          sapien eu justo iaculis faucibus.
-        </Text>
+        <Text sx={listTextStyle}>{props.content.four}</Text>
       </ListItem>
     </List>
   );

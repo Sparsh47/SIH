@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function CourseHeader(props) {
   return (
@@ -35,20 +36,15 @@ function CourseHeader(props) {
           fontSize="16px"
           w="200px"
         >
-          Personalize
+          <Link
+            to={{ pathname: "/prequiz", state: props.title }}
+            style={{ textDecoration: "none" }}
+          >
+            Personalize
+          </Link>
         </Button>
       </Flex>
-      <Box
-        bg="gray.200"
-        w="25%"
-        h="70%"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        borderRadius="10px"
-      >
-        <Text fontSize="2xl">Course Image goes here</Text>
-      </Box>
+      <Image w="25%" h="70%" borderRadius="10px" src={props.image} />
     </Flex>
   );
 }

@@ -52,24 +52,30 @@ function TeamCard(props) {
         </Flex>
         <Divider mb="20px" />
         <Flex w="60%" h="30px" align="center" justify="space-between">
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            fontSize="30px"
-            color="#718096"
-            cursor="pointer"
-          />
-          <FontAwesomeIcon
-            icon={faGithub}
-            fontSize="30px"
-            color="#718096"
-            cursor="pointer"
-          />
-          <FontAwesomeIcon
-            icon={faInstagram}
-            fontSize="30px"
-            color="#718096"
-            cursor="pointer"
-          />
+          <Link href={props.linkedin} target="_blank">
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              fontSize="30px"
+              color="#718096"
+              cursor="pointer"
+            />
+          </Link>
+          <Link href={props.github} target="_blank">
+            <FontAwesomeIcon
+              icon={faGithub}
+              fontSize="30px"
+              color="#718096"
+              cursor="pointer"
+            />
+          </Link>
+          <Link href={props.instagram} target="_blank">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              fontSize="30px"
+              color="#718096"
+              cursor="pointer"
+            />
+          </Link>
         </Flex>
       </CardBody>
     </Card>

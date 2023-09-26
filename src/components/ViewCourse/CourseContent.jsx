@@ -18,7 +18,7 @@ const accordionButtonStyle = {
   py: "15px",
 };
 
-function CourseContent() {
+function CourseContent(props) {
   return (
     <Flex
       w="100%"
@@ -52,52 +52,52 @@ function CourseContent() {
           <h2>
             <AccordionButton>
               <Box as="span" flex="1" sx={accordionButtonStyle}>
-                What is Machine Learning?
+                {props.title1}
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <CourseContentList />
+            <CourseContentList content={props.content1} />
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem borderBottomWidth="1px">
           <h2>
             <AccordionButton>
               <Box as="span" flex="1" sx={accordionButtonStyle}>
-                Simple Linear Regression
+                {props.title2}
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <CourseContentList />
+            <CourseContentList content={props.content2} />
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem borderBottomWidth="1px">
           <h2>
             <AccordionButton>
               <Box as="span" flex="1" sx={accordionButtonStyle}>
-                Multiple Linear Regression
+                {props.title3}
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <CourseContentList />
+            <CourseContentList content={props.content3} />
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem borderBottomStyle="none">
           <h2>
             <AccordionButton>
               <Box as="span" flex="1" sx={accordionButtonStyle}>
-                Polynomial Regression
+                {props.title4}
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <CourseContentList />
+            <CourseContentList content={props.content4} />
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
