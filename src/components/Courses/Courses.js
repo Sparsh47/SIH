@@ -18,13 +18,13 @@ export const courses = [
   },
   {
     id: 3,
-    title: "Programming in Java",
+    title: "Java",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
     image: Java,
   },
   {
     id: 4,
-    title: "Introduction to Python",
+    title: "Python",
     desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare quam eget quam lacinia, id bibendum dolor vestibulum. Nulla facilisi. Maecenas non nunc euismod, faucibus erat id, aliquamipsum.",
     image: Python,
   },

@@ -24,9 +24,10 @@ function App() {
   const [score, setScore] = useState(0);
 
   const fetchQuestions = async (title) => {
+    const string1= title.charAt(0).toLowerCase() + title.slice(1);
     try {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/quessionaire-api/python`
+        `http://127.0.0.1:8000/quessionaire-api/${string1}`
       );
       // console.log(data);
       setQuestions(data.Questions);
@@ -41,9 +42,10 @@ function App() {
   };
 
   const fetchTopics = async (title) => {
+    const string1= title.charAt(0).toLowerCase() + title.slice(1);
     try {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/topic-api/python`
+        `http://127.0.0.1:8000/topic-api/${string1}`
       );
 
       console.log(data.data);
