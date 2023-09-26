@@ -18,6 +18,8 @@ const Question = ({
   choiceD,
   answers,
   options,
+  incorrect,
+  setincorrect
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -50,6 +52,7 @@ const Question = ({
       setScore(score + 1);
       handleSelect("correct");
     } else {
+      incorrect.push(questions[currQues]);
       handleSelect("wrong");
       setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
@@ -61,6 +64,7 @@ const Question = ({
       setScore(score + 1);
       handleSelect("correct");
     } else {
+      incorrect.push(questions[currQues]);
       handleSelect("wrong");
       setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
@@ -72,6 +76,7 @@ const Question = ({
       setScore(score + 1);
       handleSelect("correct");
     } else {
+      incorrect.push(questions[currQues]);
       handleSelect("wrong");
       setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
@@ -83,6 +88,7 @@ const Question = ({
       setScore(score + 1);
       handleSelect("correct");
     } else {
+      incorrect.push(questions[currQues]);
       handleSelect("wrong");
       setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }

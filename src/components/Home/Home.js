@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 
-const Home = ({ name, setName, fetchQuestions, fetchTopics, topics }) => {
+const Home = ({ name, setName, fetchQuestions, fetchTopics, topics, incorrect, setincorrect }) => {
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
@@ -34,6 +34,7 @@ const Home = ({ name, setName, fetchQuestions, fetchTopics, topics }) => {
 
   const handleSubmit = () => {
     fetchQuestions(title);
+    setincorrect([]);
     history.push("/quiz");
   };
 

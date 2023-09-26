@@ -13,6 +13,8 @@ const Quiz = ({
   choiceB,
   choiceC,
   choiceD,
+  incorrect,
+  setincorrect,
 }) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
@@ -42,7 +44,6 @@ const Quiz = ({
             currQues={currQues}
             setCurrQues={setCurrQues}
             questions={questions}
-            // options={options}
             correct={questions[currQues]?.correct_answer}
             score={score}
             setScore={setScore}
@@ -52,6 +53,8 @@ const Quiz = ({
             choiceC={choiceC}
             choiceD={choiceD}
             answers={answers}
+            incorrect={incorrect}
+            setincorrect={setincorrect}
           />
           <Flex w="100%" align="center" justify="center">
             <span>Score : {score}</span>

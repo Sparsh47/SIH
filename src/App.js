@@ -22,6 +22,7 @@ function App() {
   const [choiceD, setchoiceD] = useState([]);
   const [name, setName] = useState();
   const [score, setScore] = useState(0);
+  const [incorrect, setincorrect] = useState([]);
 
   const fetchQuestions = async (title) => {
     const string1= title.charAt(0).toLowerCase() + title.slice(1);
@@ -69,7 +70,7 @@ function App() {
       <Route exact path="/landing" component={LandingPage}></Route>
       <Route exact path="/courses" component={ViewCourse}></Route>
       <Route path="/prequiz" exact>
-        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} fetchTopics = {fetchTopics} topics = {topics} />
+        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} fetchTopics = {fetchTopics} topics = {topics} incorrect = {incorrect} setincorrect = {setincorrect}/>
       </Route>
       <Route path="/quiz">
         <Quiz
@@ -83,10 +84,12 @@ function App() {
           choiceB={choiceB}
           choiceC={choiceC}
           choiceD={choiceD}
+          setincorrect = {setincorrect}
+          incorrect = {incorrect}
         />
       </Route>
       <Route path="/result">
-        <Result name={name} score={score} setScore={setScore} />
+        <Result name={name} score={score} setScore={setScore} incorrect = {incorrect} setincorrect = {setincorrect}/>
       </Route>
       <Route exact path="/our-team" component={OurTeam}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>

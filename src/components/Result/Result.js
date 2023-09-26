@@ -6,11 +6,13 @@ import { Link as ReactRouterLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
-const Result = ({ score, setScore }) => {
+const Result = ({ score, setScore, incorrect, setincorrect }) => {
   const history = useHistory();
   const location = useLocation();
   const { wrongQuestions } = location.state || [];
   console.log(wrongQuestions);
+
+  console.log(incorrect);
 
   const handleClick = () => {
     setScore(0);
