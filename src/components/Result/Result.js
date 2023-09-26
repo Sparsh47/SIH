@@ -12,21 +12,17 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
   const { wrongQuestions } = location.state || [];
   console.log(wrongQuestions);
 
-  console.log(incorrect);
+function handleClick(){
+  wrongQuestions.forEach((question)=>{
+    axios.get(`http://localhost:8000/video-api/${question}`)
+    .then(response=>{
+      console.log(response.data)
+    }).catch(error=>{
+      console.log("Error: ", error);
+    })
+  })
+}
 
-  const handleClick = () => {
-    setScore(0);
-    axios
-      .post("http://localhost:8000/recieve-questions", {
-        questions: wrongQuestions,
-      })
-      .then((response) => {
-        console.log(response.data.result);
-      })
-      .catch((error) => {
-        console.log("Error sending questions to FastAPI", error);
-      });
-  };
   return (
     <div className="result">
       <Text className="title" fontWeight="bold" fontSize={40}>
@@ -53,6 +49,6 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
       </ChakraLink>
     </div>
   );
-};
 
+}
 export default Result;
