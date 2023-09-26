@@ -14,6 +14,7 @@ import { courses } from "./components/Courses/Courses";
 
 function App() {
   const [questions, setQuestions] = useState([]);
+  const [topics, settopics] = useState([]);
   const [answers, setanswers] = useState([]);
   const [choiceA, setchoiceA] = useState([]);
   const [choiceB, setchoiceB] = useState([]);
@@ -38,6 +39,19 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
+
+  const fetchTopics = async (title) => {
+    try {
+      const { data } = await axios.get(
+        `http://127.0.0.1:8000/topic-api/python`
+      );
+
+      console.log(data.data);
+      settopics(data.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
   // const fetchQuestions = async () => {
   //   const { data } = await axios.get(
   //     `https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple#`
@@ -53,7 +67,7 @@ function App() {
       <Route exact path="/landing" component={LandingPage}></Route>
       <Route exact path="/courses" component={ViewCourse}></Route>
       <Route path="/prequiz" exact>
-        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />
+        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} fetchTopics = {fetchTopics} topics = {topics} />
       </Route>
       <Route path="/quiz">
         <Quiz
