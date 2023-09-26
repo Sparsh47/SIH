@@ -7,6 +7,7 @@ import {
   Button,
   Checkbox,
   CheckboxGroup,
+  Flex,
   Menu,
   MenuItem,
   MenuList,
@@ -42,24 +43,53 @@ const Home = ({ name, setName, fetchQuestions, fetchTopics, topics }) => {
         <span style={{ fontSize: 30 }}>Select Topics</span>
         {topics.length !== 0 ? (
           <CheckboxGroup colorScheme="green">
-            <Stack spacing={[1, 5]} direction={["column"]} marginTop={5} marginBottom={3}>
+            <Flex
+              marginTop={5}
+              marginBottom={3}
+              border="1px solid #ddd"
+              borderRadius="15px"
+              p="15px"
+              align="center"
+              justify="space-between"
+              wrap="wrap"
+            >
               {topics.map((topic, index) => (
                 <Checkbox
                   size="lg"
                   key={index}
                   value={topic}
-                  paddingX={8}
+                  m="5px"
+                  pl="10px"
+                  border="1px solid #ddd"
+                  borderRadius="10px"
+                  _hover={{ bg: "blue.50" }}
                 >
-                  <Box padding={3.5} paddingX={4} rounded={15} marginLeft={2} bg="gray.200" fontWeight={500}>{topic}</Box>
+                  <Box
+                    padding={3.5}
+                    marginLeft={2}
+                    fontWeight={500}
+                    fontSize="16px"
+                    minW="200px"
+                  >
+                    {topic}
+                  </Box>
                 </Checkbox>
               ))}
-            </Stack>
+            </Flex>
           </CheckboxGroup>
         ) : (
-          <Spinner w={20} h={20} marginY = "280px" size="xl" alignSelf="center" />
+          <Spinner w={20} h={20} marginY="280px" size="xl" alignSelf="center" />
         )}
         <div className="settings__select">
-          <Button onClick={handleSubmit}>Start Quiz</Button>
+          <Button
+            onClick={handleSubmit}
+            color="white"
+            bg="ctaColor"
+            _hover={{ bg: "ctaHover" }}
+            h="50px"
+          >
+            Start Quiz
+          </Button>
         </div>
       </div>
     </div>
