@@ -14,6 +14,7 @@ import { courses } from "./components/Courses/Courses";
 
 function App() {
   const [questions, setQuestions] = useState([]);
+  const [topics, settopics] = useState([]);
   const [answers, setanswers] = useState([]);
   const [choiceA, setchoiceA] = useState([]);
   const [choiceB, setchoiceB] = useState([]);
@@ -23,9 +24,10 @@ function App() {
   const [score, setScore] = useState(0);
 
   const fetchQuestions = async (title) => {
+    const string1= title.charAt(0).toLowerCase() + title.slice(1);
     try {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/quessionaire-api/python`
+        `http://127.0.0.1:8000/quessionaire-api/${string1}`
       );
       // console.log(data);
       setQuestions(data.Questions);
@@ -34,6 +36,20 @@ function App() {
       setchoiceB(data["Choice B"]);
       setchoiceC(data["Choice C"]);
       setchoiceD(data["Choice D"]);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const fetchTopics = async (title) => {
+    const string1= title.charAt(0).toLowerCase() + title.slice(1);
+    try {
+      const { data } = await axios.get(
+        `http://127.0.0.1:8000/topic-api/${string1}`
+      );
+
+      console.log(data.data);
+      settopics(data.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -53,7 +69,7 @@ function App() {
       <Route exact path="/landing" component={LandingPage}></Route>
       <Route exact path="/courses" component={ViewCourse}></Route>
       <Route path="/prequiz" exact>
-        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />
+        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} fetchTopics = {fetchTopics} topics = {topics} />
       </Route>
       <Route path="/quiz">
         <Quiz
