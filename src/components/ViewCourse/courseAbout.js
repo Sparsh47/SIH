@@ -106,7 +106,7 @@ export const courseAbout = [
   },
   {
     id: 3,
-    title: "Programming in Java",
+    title: "Java",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: Java,
     keyConcepts:
@@ -156,7 +156,7 @@ export const courseAbout = [
   },
   {
     id: 4,
-    title: "Introduction to Python",
+    title: "Python",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: Python,
     keyConcepts:

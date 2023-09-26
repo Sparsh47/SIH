@@ -3,13 +3,27 @@ import { useHistory } from "react-router";
 import "./Result.css";
 import { Button, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 const Result = ({ score, setScore }) => {
   const history = useHistory();
+  const location = useLocation();
+  const { wrongQuestions } = location.state || [];
+  console.log(wrongQuestions);
 
   const handleClick = () => {
     setScore(0);
-    history.push("/prequiz");
+    axios
+      .post("http://localhost:8000/recieve-questions", {
+        questions: wrongQuestions,
+      })
+      .then((response) => {
+        console.log(response.data.result);
+      })
+      .catch((error) => {
+        console.log("Error sending questions to FastAPI", error);
+      });
   };
   return (
     <div className="result">

@@ -24,7 +24,7 @@ const Home = ({ name, setName, fetchQuestions, fetchTopics, topics }) => {
 
   const location = useLocation();
   let title = location.state;
-  console.log(title);
+  // console.log(title);
 
   const history = useHistory();
 

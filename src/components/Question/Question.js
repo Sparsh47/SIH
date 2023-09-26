@@ -23,6 +23,7 @@ const Question = ({
   const [error, setError] = useState(false);
   const [ifcorrect, setifcorrect] = useState("");
   const [ifwrong, setifwrong] = useState("");
+  const [wrongQuestions, setWrongQuestions] = useState([]);
 
   const history = useHistory();
 
@@ -44,48 +45,52 @@ const Question = ({
 
   const handleCheckA = (key) => {
     setSelected(4);
-    console.log(choiceA[key]);
+    // console.log(choiceA[key]);
     if (choiceA[key] === answers[currQues]) {
       setScore(score + 1);
       handleSelect("correct");
     } else {
       handleSelect("wrong");
+      setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
   };
   const handleCheckB = (key) => {
     setSelected(1);
-    console.log(choiceB[key]);
+    // console.log(choiceB[key]);
     if (choiceB[key] === answers[currQues]) {
       setScore(score + 1);
       handleSelect("correct");
     } else {
       handleSelect("wrong");
+      setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
   };
   const handleCheckC = (key) => {
     setSelected(2);
-    console.log(choiceC[key]);
+    // console.log(choiceC[key]);
     if (choiceC[key] === answers[currQues]) {
       setScore(score + 1);
       handleSelect("correct");
     } else {
       handleSelect("wrong");
+      setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
   };
   const handleCheckD = (key) => {
     setSelected(3);
-    console.log(choiceD[key]);
+    // console.log(choiceD[key]);
     if (choiceD[key] === answers[currQues]) {
       setScore(score + 1);
       handleSelect("correct");
     } else {
       handleSelect("wrong");
+      setWrongQuestions([...wrongQuestions, questions[currQues]]);
     }
   };
 
   const handleNext = () => {
     if (currQues === answers.length - 1) {
-      history.push("/result");
+      history.push({ pathname: "/result", state: { wrongQuestions } });
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
@@ -102,6 +107,7 @@ const Question = ({
     setError();
     setCurrQues(0);
     setQuestions();
+    setWrongQuestions();
   };
 
   return (

@@ -17,8 +17,8 @@ const Quiz = ({
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
-  console.log(questions[currQues]);
-  console.log(questions);
+  // console.log(questions[currQues]);
+  // console.log(questions);
 
   // useEffect(() => {
   //   setOptions(
