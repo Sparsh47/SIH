@@ -5,6 +5,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import { Button } from "@chakra-ui/react";
 
 const Question = ({
+  id,
   currQues,
   setCurrQues,
   questions,
@@ -19,7 +20,7 @@ const Question = ({
   answers,
   options,
   incorrect,
-  setincorrect
+  setincorrect,
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -28,6 +29,10 @@ const Question = ({
   const [wrongQuestions, setWrongQuestions] = useState([]);
 
   const history = useHistory();
+  const states = {
+    id: id,
+    wrongQuestions: wrongQuestions,
+  };
 
   const handleSelect = (select) => {
     // if (selected === select && selected === correct) return "select";
@@ -96,7 +101,7 @@ const Question = ({
 
   const handleNext = () => {
     if (currQues === answers.length - 1) {
-      history.push({ pathname: "/result", state: { wrongQuestions } });
+      history.push({ pathname: "/result", states });
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();

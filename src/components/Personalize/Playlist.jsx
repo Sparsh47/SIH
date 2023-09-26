@@ -3,7 +3,7 @@ import { courseVideos } from "./courseAbout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
-function Playlist({ handleClick }) {
+function Playlist({ handleClick, courseId }) {
   function onClick(id) {
     handleClick(id);
   }
@@ -35,7 +35,7 @@ function Playlist({ handleClick }) {
         Course Name
       </Box>
       <Box w="100%" overflowY="scroll">
-        {courseVideos.map((video) => {
+        {courseVideos[0].videos.map((video) => {
           return (
             <Box
               key={video.id}

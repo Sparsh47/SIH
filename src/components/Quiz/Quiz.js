@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Question from "../Question/Question";
 import { Flex, Spinner } from "@chakra-ui/react";
+import { useLocation } from "react-router-dom";
 
 const Quiz = ({
   name,
@@ -18,6 +19,8 @@ const Quiz = ({
 }) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
+  const location = useLocation();
+  const { id } = location.state;
 
   // console.log(questions[currQues]);
   // console.log(questions);
@@ -41,6 +44,7 @@ const Quiz = ({
       {questions[currQues] ? (
         <>
           <Question
+            id={id}
             currQues={currQues}
             setCurrQues={setCurrQues}
             questions={questions}

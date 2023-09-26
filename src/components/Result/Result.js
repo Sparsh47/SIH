@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import "./Result.css";
 import { Button, Text, Link as ChakraLink } from "@chakra-ui/react";
@@ -9,23 +9,29 @@ import axios from "axios";
 const Result = ({ score, setScore, incorrect, setincorrect }) => {
   const history = useHistory();
   const location = useLocation();
-  const { wrongQuestions } = location.state || [];
-  console.log(wrongQuestions);
+  const [videoUrl, setVideoUrl] = useState({});
+  const { wrongQuestions, id } = location.states || [];
+  console.log("Wrong Questions:", wrongQuestions);
+  console.log("ID:", id);
 
   console.log(incorrect);
 
   const handleClick = () => {
     setScore(0);
-    axios
-      .post("http://localhost:8000/recieve-questions", {
-        questions: wrongQuestions,
-      })
-      .then((response) => {
-        console.log(response.data.result);
-      })
-      .catch((error) => {
-        console.log("Error sending questions to FastAPI", error);
-      });
+    wrongQuestions.forEach((question) => {
+      axios
+        .get(`http://localhost:8000/video-api/${question}`, {
+          questions: wrongQuestions,
+        })
+        .then((response) => {
+          console.log(response.data.result);
+          setVideoUrl({ ...videoUrl, response });
+        })
+        .catch((error) => {
+          console.log("Error sending questions to FastAPI", error);
+        });
+    });
+    console.log(videoUrl);
   };
   return (
     <div className="result">
@@ -34,7 +40,7 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
       </Text>
       <ChakraLink
         as={ReactRouterLink}
-        to="/personalize"
+        to={{ pathname: "/personalize", state: { id: id } }}
         style={{ textDecoration: "none" }}
       >
         <Button

@@ -1,7 +1,6 @@
 import {
   Heading,
   Text,
-  Box,
   Card,
   CardBody,
   Stack,

@@ -17,13 +17,26 @@ import {
 } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 
-const Home = ({ name, setName, fetchQuestions, fetchTopics, topics, incorrect, setincorrect }) => {
+const Home = ({
+  name,
+  setName,
+  fetchQuestions,
+  fetchTopics,
+  topics,
+  incorrect,
+  setincorrect,
+}) => {
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
 
   const location = useLocation();
   let title = location.state;
+  if (title.toLowerCase() === "java") {
+    var id = 1;
+  } else {
+    var id = 2;
+  }
   // console.log(title);
 
   const history = useHistory();
@@ -35,7 +48,7 @@ const Home = ({ name, setName, fetchQuestions, fetchTopics, topics, incorrect, s
   const handleSubmit = () => {
     fetchQuestions(title);
     setincorrect([]);
-    history.push("/quiz");
+    history.push({ pathname: "/quiz", state: { id } });
   };
 
   return (
