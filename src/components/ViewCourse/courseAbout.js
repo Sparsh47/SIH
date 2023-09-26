@@ -1,7 +1,7 @@
 export const courseAbout = [
   {
     id: 1,
-    title: "Machine Learning Bootcamp",
+    title: "AI & Machine Learning",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: "#",
     keyConcepts:
@@ -9,7 +9,7 @@ export const courseAbout = [
   },
   {
     id: 2,
-    title: "MERN Stack Bootcamp",
+    title: "Web Developement",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: "#",
     keyConcepts:
@@ -17,7 +17,7 @@ export const courseAbout = [
   },
   {
     id: 3,
-    title: "Kotlin Developement Bootcamp",
+    title: "Programming in C",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: "#",
     keyConcepts:
@@ -25,7 +25,7 @@ export const courseAbout = [
   },
   {
     id: 4,
-    title: "Data Science Bootcamp",
+    title: "Introduction to Python",
     desc: "(Course Summary) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageUrl: "#",
     keyConcepts:

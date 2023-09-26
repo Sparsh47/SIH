@@ -11,7 +11,6 @@ import {
 import { Link } from "react-router-dom";
 
 function CourseCard(props) {
-  let coursename = props.title;
   return (
     <Card maxW="420px" borderRadius="20px" p="5px" borderTop="1px solid #eee">
       <CardBody fontFamily="Inter, sans-serif">
@@ -34,11 +33,9 @@ function CourseCard(props) {
               _hover={{ bg: "blue.50" }}
               w="sm"
               h="50px"
-              // onClick={handleClick}
             >
               <Link
-                // as={ReactRouterLink}
-                to="/courses"
+                to={{ pathname: "/courses" }}
                 style={{ textDecoration: "none" }}
               >
                 View Course

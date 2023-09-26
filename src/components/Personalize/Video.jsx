@@ -10,9 +10,9 @@ import { courseVideos } from "./courseAbout";
 
 function Video({ video }) {
   return (
-    <Flex w="100%" h="fit-content">
-      <Box w="100%">
-        <AspectRatio maxW="70vw" ratio={16 / 9}>
+    <Flex w="100%" h="fit-content" direction="column">
+      <Box w="100">
+        <AspectRatio maxW="68vw" ratio={16 / 9}>
           <iframe
             src={courseVideos[video - 1].videoUrl}
             title={courseVideos[video - 1].title}
@@ -22,6 +22,10 @@ function Video({ video }) {
           ></iframe>
         </AspectRatio>
       </Box>
+      <Heading p="10px" fontWeight="semibold">
+        {courseVideos[video - 1].title}
+      </Heading>
+      <Text px="10px">{courseVideos[video - 1].desc}</Text>
     </Flex>
   );
 }
