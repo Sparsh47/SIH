@@ -4,8 +4,10 @@ import "./Result.css";
 import { Button, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-const Result = ({ score, setScore }) => {
+const Result = ({ score, setScore, incorrect, setincorrect }) => {
   const history = useHistory();
+
+  console.log(incorrect);
 
   const handleClick = () => {
     setScore(0);
