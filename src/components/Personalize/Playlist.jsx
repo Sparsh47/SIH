@@ -35,7 +35,7 @@ function Playlist({ handleClick, courseId }) {
         Course Name
       </Box>
       <Box w="100%" overflowY="scroll">
-        {courseVideos[0].videos.map((video) => {
+        {courseVideos[courseId - 1].videos.map((video) => {
           return (
             <Box
               key={video.id}

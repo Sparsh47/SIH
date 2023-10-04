@@ -23,9 +23,10 @@ function App() {
   const [name, setName] = useState();
   const [score, setScore] = useState(0);
   const [incorrect, setincorrect] = useState([]);
+  const [videoUrl, setVideoUrl] = useState([]);
 
   const fetchQuestions = async (title) => {
-    const string1= title.charAt(0).toLowerCase() + title.slice(1);
+    const string1 = title.charAt(0).toLowerCase() + title.slice(1);
     try {
       const { data } = await axios.get(
         `http://127.0.0.1:8000/quessionaire-api/${string1}`
@@ -43,7 +44,7 @@ function App() {
   };
 
   const fetchTopics = async (title) => {
-    const string1= title.charAt(0).toLowerCase() + title.slice(1);
+    const string1 = title.charAt(0).toLowerCase() + title.slice(1);
     try {
       const { data } = await axios.get(
         `http://127.0.0.1:8000/topic-api/${string1}`
@@ -70,7 +71,15 @@ function App() {
       <Route exact path="/landing" component={LandingPage}></Route>
       <Route exact path="/courses" component={ViewCourse}></Route>
       <Route path="/prequiz" exact>
-        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} fetchTopics = {fetchTopics} topics = {topics} incorrect = {incorrect} setincorrect = {setincorrect}/>
+        <Home
+          name={name}
+          setName={setName}
+          fetchQuestions={fetchQuestions}
+          fetchTopics={fetchTopics}
+          topics={topics}
+          incorrect={incorrect}
+          setincorrect={setincorrect}
+        />
       </Route>
       <Route path="/quiz">
         <Quiz
@@ -84,16 +93,26 @@ function App() {
           choiceB={choiceB}
           choiceC={choiceC}
           choiceD={choiceD}
-          setincorrect = {setincorrect}
-          incorrect = {incorrect}
+          setincorrect={setincorrect}
+          incorrect={incorrect}
         />
       </Route>
       <Route path="/result">
-        <Result name={name} score={score} setScore={setScore} incorrect = {incorrect} setincorrect = {setincorrect}/>
+        <Result
+          name={name}
+          score={score}
+          setScore={setScore}
+          incorrect={incorrect}
+          setincorrect={setincorrect}
+          videoUrl={videoUrl}
+          setVideoUrl={setVideoUrl}
+        />
       </Route>
       <Route exact path="/our-team" component={OurTeam}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
-      <Route exact path="/personalize" component={Personalize}></Route>
+      <Route exact path="/personalize">
+        <Personalize videoUrl={videoUrl} setVideoUrl={setVideoUrl} />
+      </Route>
     </div>
   );
 }

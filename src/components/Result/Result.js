@@ -6,10 +6,17 @@ import { Link as ReactRouterLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
-const Result = ({ score, setScore, incorrect, setincorrect }) => {
+const Result = ({
+  score,
+  setScore,
+  incorrect,
+  setincorrect,
+  videoUrl,
+  setVideoUrl,
+}) => {
   const history = useHistory();
   const location = useLocation();
-  const [videoUrl, setVideoUrl] = useState({});
+  const [responses, setResponses] = useState([]);
   const { wrongQuestions, id } = location.states || [];
   console.log("Wrong Questions:", wrongQuestions);
   console.log("ID:", id);
@@ -22,14 +29,14 @@ const Result = ({ score, setScore, incorrect, setincorrect }) => {
           questions: wrongQuestions,
         })
         .then((response) => {
-          console.log(response.data.result);
-          setVideoUrl({ ...videoUrl, response });
+          console.log(response.data);
+          responses.push(response.data);
         })
         .catch((error) => {
           console.log("Error sending questions to FastAPI", error);
         });
     });
-    console.log(videoUrl);
+    setVideoUrl(responses);
   };
   return (
     <div className="result">
